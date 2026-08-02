@@ -20,7 +20,7 @@ CREATE INDEX IF NOT EXISTS idx_course_bookings_user_id_cancelled_at ON course_bo
 CREATE INDEX IF NOT EXISTS idx_credit_purchases_purchase_at ON credit_purchases (purchase_at);
 
 -- 工單 4：首頁「進行中課程」
-CREATE INDEX IF NOT EXISTS idx_courses_start_at_end_at ON courses (start_at, end_at);
+CREATE INDEX IF NOT EXISTS idx_courses_end_at ON courses (end_at);
 
 -- 工單 5：上週開課課程的教練報名統計（思考方向：需新增兩個索引）
 CREATE INDEX IF NOT EXISTS idx_course_bookings_course_id_cancelled_at ON course_bookings (course_id, cancelled_at);
